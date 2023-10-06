@@ -1,12 +1,11 @@
-import {Platform, SafeAreaView, StyleSheet, View } from 'react-native';
+import {SafeAreaView, StatusBar, StyleSheet} from 'react-native';
 import Routes from './src/routes/Routes';
 
 export default function App() {
   return (
     <SafeAreaView style={styles.container}>
-      <View style={[{paddingTop: Platform.OS === 'android' && 30}, styles.container]}>
-        <Routes />
-      </View>
+      <StatusBar translucent={false}/>
+      <Routes />
     </SafeAreaView>
   );
 }
